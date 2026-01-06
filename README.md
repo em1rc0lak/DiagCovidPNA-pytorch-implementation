@@ -147,8 +147,6 @@ train(Config, model_id='model9', class_mode='3-class')  # 3-class (COVID vs Norm
 | model8 | Xception (2-class) | ✅ | ✅ | ✅ |
 | model9 | Xception (3-class) | ✅ | ✅ | ✅ |
 
-> **Note**: Model6 (Inception-v3) automatically uses 299×299 input size instead of 150×150.
-
 ### Evaluation
 
 Evaluate all trained models:
@@ -178,8 +176,6 @@ The training automatically selects hyperparameters based on `num_classes`:
 | Epochs | 100 | 150 |
 | Image Size | 150×150 | 150×150 |
 | Optimizer | Adam | Adam |
-
-> Hybrid models use smaller learning rate and batch size for fine-grained classification.
 
 ## Data Augmentation
 

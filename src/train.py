@@ -119,10 +119,6 @@ def train(config, model_id='model5', class_mode='4-class'):
     save_dir = Path(f"{config.CHECKPOINT_DIR}/{model_id}2_{model_config['architecture']}")
     save_dir.mkdir(parents=True, exist_ok=True)
 
-    if model_config['architecture'] == 'inception_v3':
-        img_size = 299
-    else:
-        img_size = config.IMG_SIZE
     
     # Data use model specific settings 
     print("\nLoading data...")
@@ -132,7 +128,7 @@ def train(config, model_id='model5', class_mode='4-class'):
         test_dir=config.TEST_DIR,
         batch_size=batch_size,
         class_mode=class_mode,
-        img_size=img_size,
+        img_size=config.IMG_SIZE,
         use_zoom=model_config['use_augmentation'],
         use_contrast=model_config['use_contrast'],
         use_translation=model_config['use_augmentation']
