@@ -20,7 +20,6 @@ class Config:
     VALIDATION_DIR = os.path.join("data", "Valid")
     TEST_DIR = os.path.join("data", "Test")
     CHECKPOINT_DIR = "checkpoints"
-    RESULTS_DIR = "results"
     
     # Classes
     CLASSES_4 = ['COVID-19', 'Normal', 'Bacterial_PNA', 'Viral_PNA']

@@ -29,8 +29,7 @@ DiagCovidPNA/
 │   ├── Train/             # Training images
 │   ├── Valid/             # Validation images
 │   └── Test/              # Test images
-├── checkpoints/           # Saved model weights
-├── results/               # Output figures and results
+├── checkpoints/           # Saved model weights and training history
 ├── pyproject.toml         # Project dependencies
 └── README.md
 ```
