@@ -1,6 +1,6 @@
 # DiagCovidPNA
-
-A deep learning system for COVID-19 and pneumonia diagnosis from chest X-ray images using transfer learning with Xception, Inception-v3, and Inception-ResNet-v2 architectures.
+This is a deep learning system for COVID-19 and pneumonia diagnosis from chest X-ray images using transfer learning with Xception, Inception-v3, and Inception-ResNet-v2 architectures.
+The code implements the paper: https://doi.org/10.1007/s00500-023-08915-1
 
 ## Overview
 
