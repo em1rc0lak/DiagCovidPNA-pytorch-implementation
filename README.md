@@ -80,11 +80,6 @@ data/
 
 All hyperparameters and model configurations are centralized in `config.py`:
 
-### Image Settings
-```python
-IMG_SIZE = 150          # Input image size (150×150 pixels)
-CHANNELS = 3            # RGB channels
-```
 
 ### Training Hyperparameters
 
