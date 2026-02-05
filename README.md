@@ -2,6 +2,13 @@
 This is a deep learning system for COVID-19 and pneumonia diagnosis from chest X-ray images using transfer learning with Xception, Inception-v3, and Inception-ResNet-v2 architectures.
 The code implements the paper: https://doi.org/10.1007/s00500-023-08915-1
 
+## Reproduction Results
+Expriments are reproduced with the exact details in the paper.
+
+- Models 1–5 and 7-9: Successfully reproduced with results being consistent with the original reported performance.  
+- Model 6 (Inception-V3 fine-tuned model): The model was unable to perform unlike the paper, likely due to differences in transfer learning based fine tuning of the Inception-V3 backbone.
+
+  
 ## Overview
 
 This project implements a hybrid diagnostic system that classifies chest X-rays into four categories:
