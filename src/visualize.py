@@ -50,7 +50,7 @@ def visualize_figure(model_path, test_dir, model_name='xception', num_classes=4,
     for display_name, folder_name in class_folders.items():
         folder_path = os.path.join(test_dir, folder_name)
         if os.path.exists(folder_path):
-            images = [f for f in os.listdir(folder_path) if f.lower().endswith(('.jpg', '.jpeg', '.png'))]
+            images = [f for f in os.listdir(folder_path) if f.lower().endswith(('.jpg'))]
             if len(images) >= 2:
                 samples[display_name] = [
                     os.path.join(folder_path, images[0]),
@@ -93,7 +93,6 @@ def visualize_figure(model_path, test_dir, model_name='xception', num_classes=4,
             # Plot heatmap
             axes[row_cam, col].imshow(visualization)
             axes[row_cam, col].axis('off')
-    
     plt.tight_layout()
     plt.savefig(save_path, dpi=200, bbox_inches='tight')
     print(f"Saved to {save_path}")

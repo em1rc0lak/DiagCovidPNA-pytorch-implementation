@@ -128,7 +128,7 @@ def train(config, model_id='model5', class_mode='4-class'):
         test_dir=config.TEST_DIR,
         batch_size=batch_size,
         class_mode=class_mode,
-        img_size=config.IMG_SIZE,
+        img_size=img_size,
         use_zoom=model_config['use_augmentation'],
         use_contrast=model_config['use_contrast'],
         use_translation=model_config['use_augmentation']

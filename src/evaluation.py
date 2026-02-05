@@ -85,7 +85,7 @@ def evaluate(model_path, class_mode, model_name='xception', hybrid_paths=None):
         test_dir=Config.TEST_DIR,
         batch_size=32,
         class_mode=test_class_mode,
-        img_size=Config.IMG_SIZE,
+        img_size=img_size,
         use_zoom=False,
         use_contrast=False,
         use_translation=False,
