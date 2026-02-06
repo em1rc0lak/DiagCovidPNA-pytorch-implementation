@@ -84,27 +84,18 @@ class DiagCovidPNA(nn.Module):
         
         return model, in_features
     
-    def _create_inception_v3(self, pretrained=True):
+
+    def _create_inception_v3(self, pretrained):
         """
-        Create Inception-v3 base model.
-        Output features: 2048 (after Global Average Pooling)
+        Create Inception-v3 base model using timm.
+        Output features: 2048
         """
-     
-        if pretrained:
-            weights = models.Inception_V3_Weights.IMAGENET1K_V1
-        else:
-            weights = None
-        
-        model = models.inception_v3(weights=weights, init_weights=False)
-        
-        model.aux_logits = False
-        model.AuxLogits = None
-        
+        model = timm.create_model('inception_v3', pretrained=pretrained)
         model.fc = nn.Identity()
-        model.dropout = nn.Identity()
         in_features = 2048
         
         return model, in_features
+
     
     def _create_inception_resnet_v2(self, pretrained=True):
         """

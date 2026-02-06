@@ -98,7 +98,7 @@ class ImageDataset(Dataset):
         
         # Define class mappings
         if class_mode == '4-class':
-            self.class_names = ['Bacterial Pneumonia', 'Covid-19', 'Normal', 'Viral Pneumonia']
+            self.class_names = ['Covid-19', 'Normal', 'Bacterial Pneumonia', 'Viral Pneumonia']
             self.folder_to_class = {
                 'Covid-19': 0,
                 'Normal': 1,

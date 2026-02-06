@@ -72,11 +72,6 @@ def evaluate(model_path, class_mode, model_name='xception', hybrid_paths=None):
         model.load_state_dict(torch.load(model_path, map_location=device)['model_state_dict'])
         model.eval()
         test_class_mode = class_mode
-    
-    if model_name == 'inception_v3':
-        img_size = 299
-    else:
-        img_size = Config.IMG_SIZE
 
     # Load test data
     _, _, test_loader = create_dataloaders(
@@ -85,7 +80,7 @@ def evaluate(model_path, class_mode, model_name='xception', hybrid_paths=None):
         test_dir=Config.TEST_DIR,
         batch_size=32,
         class_mode=test_class_mode,
-        img_size=img_size,
+        img_size=Config.IMG_SIZE,
         use_zoom=False,
         use_contrast=False,
         use_translation=False,

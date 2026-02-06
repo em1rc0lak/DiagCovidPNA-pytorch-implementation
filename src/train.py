@@ -114,12 +114,11 @@ def train(config, model_id='model5', class_mode='4-class'):
     else:  # 3-class or 2-class
         batch_size = config.BATCH_SIZE_HYBRID
         epochs = config.EPOCHS_HYBRID
-        lr = config.LR_HYBRID
+        lr = config.LR_HYBRID 
 
-    save_dir = Path(f"{config.CHECKPOINT_DIR}/{model_id}2_{model_config['architecture']}")
+    save_dir = Path(f"{config.CHECKPOINT_DIR}/{model_id}_{model_config['architecture']}")
     save_dir.mkdir(parents=True, exist_ok=True)
 
-    
     # Data use model specific settings 
     print("\nLoading data...")
     train_loader, val_loader, test_loader = create_dataloaders(
@@ -128,7 +127,7 @@ def train(config, model_id='model5', class_mode='4-class'):
         test_dir=config.TEST_DIR,
         batch_size=batch_size,
         class_mode=class_mode,
-        img_size=img_size,
+        img_size=config.IMG_SIZE,
         use_zoom=model_config['use_augmentation'],
         use_contrast=model_config['use_contrast'],
         use_translation=model_config['use_augmentation']
@@ -213,12 +212,12 @@ def train(config, model_id='model5', class_mode='4-class'):
 
 if __name__ == "__main__":
     
-    train(Config, model_id='model1')
-    train(Config, model_id='model2')
-    train(Config, model_id='model3')
-    train(Config, model_id='model4')
-    train(Config, model_id='model5')
+    #train(Config, model_id='model1')
+    #train(Config, model_id='model2')
+    #train(Config, model_id='model3')
+    #train(Config, model_id='model4')
+    #train(Config, model_id='model5')
     train(Config, model_id='model6')
-    train(Config, model_id='model7')
-    train(Config, model_id='model8', class_mode='2-class')  
-    train(Config, model_id='model9', class_mode='3-class')  
+    #train(Config, model_id='model7')
+    #train(Config, model_id='model8', class_mode='2-class')  
+    #train(Config, model_id='model9', class_mode='3-class')  

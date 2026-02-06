@@ -14,6 +14,28 @@ The hybrid approach uses a two-stage classification:
 1. **3-class model**: Classifies images as COVID-19, Normal, or Pneumonia
 2. **2-class model**: Further classifies Pneumonia cases as Bacterial or Viral
 
+## Reproduction Results
+
+Evaluation results on the test set:
+
+| Model | Architecture | Accuracy (%) | F-measure (%) | Precision (%) | Recall (%) |
+|-------|--------------|--------------|---------------|---------------|------------|
+| Model 1 | Xception (4-class) | 95.56 | 95.55 | 95.60 | 95.56 |
+| Model 2 | Xception (4-class) | 94.78 | 94.76 | 94.86 | 94.78 |
+| Model 3 | Xception (4-class) | 94.50 | 94.51 | 94.52 | 94.50 |
+| Model 4 | Xception (4-class) | 94.50 | 94.47 | 94.48 | 94.50 |
+| Model 5 | Xception (4-class) | **96.56** | **96.55** | **96.56** | **96.56** |
+| Model 6 | Inception-v3 (4-class) | 94.72 | 94.71 | 94.71 | 94.72 |
+| Model 7 | Inception-ResNet-v2 (4-class) | 95.33 | 95.31 | 95.41 | 95.33 |
+| Model 8 | Xception (2-class) | 93.33 | 93.33 | 93.46 | 93.33 |
+| Model 9 | Xception (3-class) | **99.17** | **99.17** | **99.17** | **99.17** |
+| Model 10 | Hybrid (3-class → 2-class) | 95.94 | 95.92 | 95.96 | 95.94 |
+
+**Best Results:**
+- **Model 5 (Xception)** achieves the best 4-class accuracy at **96.56%**
+- **Model 9 (3-class)** achieves the highest overall accuracy at **99.17%**
+- **Model 10 (Hybrid)** combines models 8 and 9 for 4-class classification at **95.94%**
+
 ## Project Structure
 
 ```
