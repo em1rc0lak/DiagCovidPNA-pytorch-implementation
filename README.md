@@ -28,7 +28,7 @@ Evaluation results on the test set:
 | Model 6 | Inception-v3 (4-class) | 94.72 | 94.71 | 94.71 | 94.72 |
 | Model 7 | Inception-ResNet-v2 (4-class) | 95.33 | 95.31 | 95.41 | 95.33 |
 | Model 8 | Xception (2-class) | 93.33 | 93.33 | 93.46 | 93.33 |
-| Model 9 | Xception (3-class) | **99.17** | **99.17** | **99.17** | **99.17** |
+| Model 9 | Xception (3-class) | 99.17 | 99.17 | 99.17 | 99.17 |
 | Model 10 | Hybrid (3-class → 2-class) | 95.94 | 95.92 | 95.96 | 95.94 |
 
 
